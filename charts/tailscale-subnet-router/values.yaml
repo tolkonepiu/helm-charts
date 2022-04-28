@@ -62,11 +62,9 @@ securityContext:
   runAsUser: 0
   # -- The GID of the user to run the router as
   runAsGroup: 0
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
+  capabilities:
+    add:
+      - NET_ADMIN
 
 # -- Resources to allocate to the pods
 resources: {}
