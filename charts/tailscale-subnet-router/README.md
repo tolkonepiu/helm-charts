@@ -1,10 +1,10 @@
 # tailscale-subnet-router
 
-![Version: 1.0.3](https://img.shields.io/badge/Version-1.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.2](https://img.shields.io/badge/AppVersion-v1.0.2-informational?style=flat-square)
+![Version: 1.0.4](https://img.shields.io/badge/Version-1.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.2](https://img.shields.io/badge/AppVersion-v1.0.2-informational?style=flat-square)
 
 Deploy a Tailscale subnet router on Kubernetes
 
-**Homepage:** <https://github.com/tolkonepiu/helm-charts/charts/tailscale-subnet-router>
+**Homepage:** <https://github.com/tolkonepiu/helm-charts>
 
 ## Maintainers
 
@@ -14,7 +14,7 @@ Deploy a Tailscale subnet router on Kubernetes
 
 ## Source Code
 
-* <https://github.com/tolkonepiu/helm-charts/charts/tailscale-subnet-router>
+* <https://github.com/tolkonepiu/helm-charts/tree/main/charts/tailscale-subnet-router>
 
 ## Prerequesites
 
@@ -75,6 +75,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | podSecurityContext | object | `{}` |  |
 | replicas | int | `1` | Do not change! Only `1` is currently supported. |
 | resources | object | `{}` | Resources to allocate to the pods |
+| securityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
 | securityContext.runAsGroup | int | `0` | The GID of the user to run the router as |
 | securityContext.runAsUser | int | `0` | The UID of the user to run the router as |
 | serviceAccount | object | `{"annotations":{},"create":true,"name":""}` | The service account to create or attach |
