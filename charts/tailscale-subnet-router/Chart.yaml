@@ -8,6 +8,6 @@ home: https://github.com/tolkonepiu/helm-charts/charts/tailscale-subnet-router
 sources:
   - https://github.com/tolkonepiu/helm-charts/charts/tailscale-subnet-router
 maintainers:
-  - email: me@popov.wtf
-    name: Pavel Popov
+  - name: tolkonepiu
+    email: me@popov.wtf
     url: https://popov.wtf
