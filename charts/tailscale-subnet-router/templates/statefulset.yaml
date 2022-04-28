@@ -39,7 +39,7 @@ spec:
             - name: KUBE_SECRET
               value: {{ .Values.tailscale.state.secretName }}
             - name: USERSPACE
-              value: {{ .Values.tailscale.userspaceNetworking }}
+              value: {{ .Values.tailscale.userspaceNetworking | quote }}
             - name: AUTH_KEY
               valueFrom:
                 secretKeyRef:
