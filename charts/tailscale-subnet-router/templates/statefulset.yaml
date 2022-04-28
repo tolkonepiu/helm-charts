@@ -8,6 +8,7 @@ spec:
   replicas: {{ .Values.replicas }}
   updateStrategy:
     type: RollingUpdate
+  hostNetwork: {{ .Values.hostNetwork }}
   selector:
     matchLabels:
       {{- include "tailscale-subnet-router.selectorLabels" . | nindent 6 }}

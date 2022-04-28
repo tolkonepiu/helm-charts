@@ -1,6 +1,6 @@
 # tailscale-subnet-router
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.2](https://img.shields.io/badge/AppVersion-v1.0.2-informational?style=flat-square)
+![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.2](https://img.shields.io/badge/AppVersion-v1.0.2-informational?style=flat-square)
 
 Deploy a Tailscale subnet router on Kubernetes
 
@@ -10,7 +10,7 @@ Deploy a Tailscale subnet router on Kubernetes
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| Pavel Popov | <me@popov.wtf> | <https://popov.wtf> |
+| tolkonepiu | <me@popov.wtf> | <https://popov.wtf> |
 
 ## Source Code
 
@@ -64,7 +64,8 @@ The command removes all the Kubernetes components associated with the chart and 
 |-----|------|---------|-------------|
 | affinity | object | `{}` | [Affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) for pod assignment |
 | fullnameOverride | string | `""` | Optional override for app fullname |
-| image.pullPolicy | string | `"Always"` |  |
+| hostNetwork | bool | `false` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ghcr.io/tolkonepiu/tailscale-k8s"` |  |
 | image.tag | string | `"v1.0.2"` |  |
 | imagePullSecrets | list | `[]` | List the secrets containing the Docker creds for images in this Chart |

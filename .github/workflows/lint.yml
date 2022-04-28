@@ -15,7 +15,8 @@ jobs:
       - name: 🏗 Set up Helm
         uses: azure/setup-helm@v1
 
-      - uses: actions/setup-python@v3
+      - name: 🏗 Set up Python
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
 
@@ -31,11 +32,11 @@ jobs:
           fi
 
       - name: 🚀 Run chart-testing (lint)
-        run: ct lint
+        run: ct lint --config ct.yaml
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.2.0
         if: steps.list-changed.outputs.changed == 'true'
 
       - name: 🚀 Run chart-testing (install)
-        run: ct install
+        run: ct install --config ct.yaml
