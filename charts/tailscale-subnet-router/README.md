@@ -64,7 +64,8 @@ The command removes all the Kubernetes components associated with the chart and 
 |-----|------|---------|-------------|
 | affinity | object | `{}` | [Affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) for pod assignment |
 | fullnameOverride | string | `""` | Optional override for app fullname |
-| image.pullPolicy | string | `"Always"` |  |
+| hostNetwork | bool | `false` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ghcr.io/tolkonepiu/tailscale-k8s"` |  |
 | image.tag | string | `"v1.0.2"` |  |
 | imagePullSecrets | list | `[]` | List the secrets containing the Docker creds for images in this Chart |
