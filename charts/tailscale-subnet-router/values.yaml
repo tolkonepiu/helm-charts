@@ -22,6 +22,8 @@ tailscale:
   state:
     # -- The secret that the subnet router will store its state in
     secretName: tailscale-subnet-router-state
+  # -- Allows running Tailscale where you don’t have access to create a VPN tunnel device
+  userspaceNetworking: true
   # -- Routes for the subnet router to publish
   routes:
     # Default service CIDR

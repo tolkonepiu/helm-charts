@@ -74,13 +74,14 @@ The command removes all the Kubernetes components associated with the chart and 
 | podSecurityContext | object | `{}` |  |
 | replicas | int | `1` | Do not change! Only `1` is currently supported. |
 | resources | object | `{}` | Resources to allocate to the pods |
-| securityContext.runAsGroup | int | `1000` | The GID of the user to run the router as |
-| securityContext.runAsUser | int | `1000` | The UID of the user to run the router as |
+| securityContext.runAsGroup | int | `0` | The GID of the user to run the router as |
+| securityContext.runAsUser | int | `0` | The UID of the user to run the router as |
 | serviceAccount | object | `{"annotations":{},"create":true,"name":""}` | The service account to create or attach |
 | tailscale.auth.secretKey | string | `"AUTH_KEY"` | The key within the above Secret that contains a Tailscale auth key |
 | tailscale.auth.secretName | string | `"tailscale-subnet-router-secrets"` | The name of the secret containing a Tailscale auth key |
 | tailscale.routes | list | `["10.43.0.0/16","10.42.0.0/16"]` | Routes for the subnet router to publish |
 | tailscale.state.secretName | string | `"tailscale-subnet-router-state"` | The secret that the subnet router will store its state in |
+| tailscale.userspaceNetworking | bool | `true` | Allows running Tailscale where you don’t have access to create a VPN tunnel device |
 | tolerations | list | `[]` | [Tolerations](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) for pod assignment |
 | volumeMounts | list | `[]` | Additional volumes to add to mount to the primary container |
 | volumes | list | `[]` | Additional volumes to add to the pod |
