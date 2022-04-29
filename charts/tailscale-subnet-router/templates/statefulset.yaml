@@ -33,7 +33,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: {{ required "A valid .Values.image.repository entry required!" .Values.image.repository }}:{{ default .Chart.AppVersion .Values.image.tag }}
+          image: {{ template "tailscale-subnet-router.image" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: KUBE_SECRET

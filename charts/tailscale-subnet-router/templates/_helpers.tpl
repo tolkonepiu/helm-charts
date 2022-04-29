@@ -31,6 +31,13 @@ Create chart name and version as used by the chart label.
 {{- end }}
 
 {{/*
+The image to use
+*/}}
+{{- define "tailscale-subnet-router.image" -}}
+{{- printf "%s:%s" .Values.image.repository (default (printf "%s" .Chart.AppVersion) .Values.image.tag) }}
+{{- end }}
+
+{{/*
 Common labels
 */}}
 {{- define "tailscale-subnet-router.labels" -}}
