@@ -2,9 +2,13 @@
 replicas: 1
 
 image:
+  # -- The docker image repository to use
   repository: ghcr.io/tolkonepiu/tailscale-k8s
+  # -- The docker image tag to use
+  # @default Chart version
+  tag: ''
+  # -- The docker image pull policy
   pullPolicy: IfNotPresent
-  tag: v1.0.2
 
 # Use hostNetwork for the pod
 hostNetwork: false
