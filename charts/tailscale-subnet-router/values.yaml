@@ -3,7 +3,7 @@ replicas: 1
 
 image:
   # -- The docker image repository to use
-  repository: ghcr.io/tolkonepiu/tailscale-k8s
+  repository: ghcr.io/tolkonepiu/tailscale-docker
   # -- The docker image tag to use
   # @default Chart version
   tag: ''

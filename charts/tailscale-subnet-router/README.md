@@ -1,6 +1,6 @@
 # tailscale-subnet-router
 
-![Version: 1.0.5](https://img.shields.io/badge/Version-1.0.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.0.3](https://img.shields.io/badge/AppVersion-v1.0.3-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.24.2](https://img.shields.io/badge/AppVersion-v1.24.2-informational?style=flat-square)
 
 Deploy a Tailscale subnet router on Kubernetes
 
@@ -66,7 +66,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | fullnameOverride | string | `""` | Optional override for app fullname |
 | hostNetwork | bool | `false` |  |
 | image.pullPolicy | string | `"IfNotPresent"` | The docker image pull policy |
-| image.repository | string | `"ghcr.io/tolkonepiu/tailscale-k8s"` | The docker image repository to use |
+| image.repository | string | `"ghcr.io/tolkonepiu/tailscale-docker"` | The docker image repository to use |
 | image.tag | string | `""` | The docker image tag to use @default Chart version |
 | imagePullSecrets | list | `[]` | List the secrets containing the Docker creds for images in this Chart |
 | nameOverride | string | `""` | Optional override for app name |
