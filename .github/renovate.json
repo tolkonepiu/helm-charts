@@ -17,7 +17,7 @@
       "description": "Update tailscale docker image references",
       "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
       "matchStrings": [
-        "version: '(?<currentValue>.*?)'\\s+",
+        "version: \"(?<currentValue>.*?)\"\\s+",
         "appVersion: \"(?<currentValue>.*?)\"\\s+"
       ],
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
