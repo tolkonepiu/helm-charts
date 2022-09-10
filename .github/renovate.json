@@ -12,6 +12,14 @@
   ],
   "regexManagers": [
     {
+      "description": "Update tailscale-subnet-router references",
+      "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
+      "matchStrings": [
+        "version: \"(?<currentValue>.*?)\"\\s+"
+      ],
+      "versioningTemplate": "semver"
+    },
+    {
       "description": "Update tailscale docker image references",
       "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
       "matchStrings": [
