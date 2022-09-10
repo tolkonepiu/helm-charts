@@ -1,5 +1,16 @@
 {
   "extends": ["config:base"],
-  "dependencyDashboard": true,
-  "bumpVersion": "patch"
+  "dependencyDashboard": false,
+  "bumpVersion": "patch",
+  "regexManagers": [
+    {
+      "description": "Update tailscale docker image references",
+      "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
+      "matchStrings": [
+        "appVersion: \"(?<currentValue>.*?)\"\\s+"
+      ],
+      "depNameTemplate": "tolkonepiu/tailscale-docker",
+      "datasourceTemplate": "docker"
+    }
+  ]
 }
