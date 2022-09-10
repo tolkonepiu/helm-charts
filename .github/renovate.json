@@ -1,15 +1,13 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": false,
-  "bumpVersion": "patch",
+  "helmv3": {
+    "fileMatch": ["charts/.+/Chart\\.yaml$"]
+  },
   "packageRules": [
     {
-      "description": "Bump versions in README.md for tailscale-subnet-router",
-      "matchFiles": ["charts/tailscale-subnet-router/README.md"],
-      "schedule": null,
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "deps",
-      "additionalBranchPrefix": ""
+      "matchDatasources": ["helm"],
+      "bumpVersion": "patch"
     }
   ],
   "regexManagers": [
@@ -17,8 +15,16 @@
       "description": "Update tailscale docker image references",
       "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
       "matchStrings": [
-        "version: \"(?<currentValue>.*?)\"\\s+",
         "appVersion: \"(?<currentValue>.*?)\"\\s+"
+      ],
+      "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "description": "Update tailscale docker image references in README.md",
+      "fileMatch": ["^charts\\/tailscale-subnet-router\\/README\\.md$"],
+      "matchStrings": [
+        "AppVersion(:\\s|-)(?<currentValue>v\\d+\\.\\d+\\.\\d+(?:\\+\\d+)?)"
       ],
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
       "datasourceTemplate": "docker"
