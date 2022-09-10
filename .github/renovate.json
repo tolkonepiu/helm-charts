@@ -2,11 +2,22 @@
   "extends": ["config:base"],
   "dependencyDashboard": false,
   "bumpVersion": "patch",
+  "packageRules": [
+    {
+      "description": "Bump versions in README.md for tailscale-subnet-router",
+      "matchFiles": ["charts/tailscale-subnet-router/README.md"],
+      "schedule": null,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
+      "additionalBranchPrefix": ""
+    }
+  ],
   "regexManagers": [
     {
       "description": "Update tailscale docker image references",
       "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
       "matchStrings": [
+        "version: '(?<currentValue>.*?)'\\s+",
         "appVersion: \"(?<currentValue>.*?)\"\\s+"
       ],
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
