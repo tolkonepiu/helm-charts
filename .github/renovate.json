@@ -1,6 +1,13 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": false,
+  "packageRules": [
+    {
+      "description": "Trim leading v from version for helm-docs",
+      "matchPackageNames": ["helm-docs"],
+      "extractVersion": "^v(?<version>\\d+\\.\\d+\\.\\d+)$"
+    }
+  ],
   "regexManagers": [
     {
       "description": "Update tailscale-subnet-router references",
