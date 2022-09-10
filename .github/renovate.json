@@ -9,7 +9,7 @@
       "matchStrings": [
         "appVersion: \"(?<currentValue>.*?)\"\\s+"
       ],
-      "depNameTemplate": "tolkonepiu/tailscale-docker",
+      "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
       "datasourceTemplate": "docker"
     }
   ]
