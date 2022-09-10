@@ -8,9 +8,9 @@
       "matchStrings": [
         "version: \"(?<currentValue>.*?)\"\\s+"
       ],
-      "versioningTemplate": "semver-coerced",
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
       "description": "Update tailscale docker image references",
