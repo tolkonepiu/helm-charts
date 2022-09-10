@@ -1,15 +1,6 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": false,
-  "helmv3": {
-    "fileMatch": ["charts/.+/Chart\\.yaml$"]
-  },
-  "packageRules": [
-    {
-      "matchDatasources": ["helm"],
-      "bumpVersion": "patch"
-    }
-  ],
   "regexManagers": [
     {
       "description": "Update tailscale-subnet-router references",
@@ -17,7 +8,9 @@
       "matchStrings": [
         "version: \"(?<currentValue>.*?)\"\\s+"
       ],
-      "versioningTemplate": "semver"
+      "versioningTemplate": "semver",
+      "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
+      "datasourceTemplate": "docker"
     },
     {
       "description": "Update tailscale docker image references",
