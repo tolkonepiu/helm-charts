@@ -4,9 +4,13 @@
   "regexManagers": [
     {
       "description": "Update tailscale-subnet-router references",
-      "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
+      "fileMatch": [
+        "^charts\\/tailscale-subnet-router\\/Chart\\.yaml$",
+        "^charts\\/tailscale-subnet-router\\/README\\.md$"
+      ],
       "matchStrings": [
-        "version: \"(?<currentValue>.*?)\"\\s+"
+        "version: \"(?<currentValue>.*?)\"\\s+",
+        "Version(:\\s|-)(?<currentValue>\\d+\\.\\d+\\.\\d+(?:\\+\\d+)?)"
       ],
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
       "datasourceTemplate": "docker",
@@ -14,17 +18,12 @@
     },
     {
       "description": "Update tailscale docker image references",
-      "fileMatch": ["^charts\\/tailscale-subnet-router\\/Chart\\.yaml$"],
-      "matchStrings": [
-        "appVersion: \"(?<currentValue>.*?)\"\\s+"
+      "fileMatch": [
+        "^charts\\/tailscale-subnet-router\\/Chart\\.yaml$",
+        "^charts\\/tailscale-subnet-router\\/README\\.md$"
       ],
-      "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
-      "datasourceTemplate": "docker"
-    },
-    {
-      "description": "Update tailscale docker image references in README.md",
-      "fileMatch": ["^charts\\/tailscale-subnet-router\\/README\\.md$"],
       "matchStrings": [
+        "appVersion: \"(?<currentValue>.*?)\"\\s+",
         "AppVersion(:\\s|-)(?<currentValue>v\\d+\\.\\d+\\.\\d+(?:\\+\\d+)?)"
       ],
       "depNameTemplate": "ghcr.io/tolkonepiu/tailscale-docker",
