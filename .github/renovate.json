@@ -3,6 +3,10 @@
   "dependencyDashboard": false,
   "packageRules": [
     {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
       "description": "Trim leading v from version for helm-docs",
       "matchPackageNames": ["helm-docs"],
       "extractVersion": "^v(?<version>\\d+\\.\\d+\\.\\d+)$"
