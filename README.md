@@ -12,7 +12,7 @@ $ helm install my-release tolkonepiu/<chart>
 
 The Helm Charts in this repository support only the two most recent stable versions of Kubernetes. If you need to retrofit support for older versions of Kubernetes, please fork and customize as you see fit.
 
-Only Helm 3.x is supported. The maintainer of these Charts tends to run the latest stable release. 
+Only Helm 3.x is supported. The maintainer of these Charts tends to run the latest stable release.
 
 ## License
 
