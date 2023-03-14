@@ -16,7 +16,7 @@ Only Helm 3.x is supported. The maintainer of these Charts tends to run the late
 
 ## License
 
-Copyright &copy; 2022 Pavel Popov
+Copyright &copy; 2023 Pavel Popov
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
