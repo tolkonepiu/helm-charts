@@ -2,6 +2,23 @@ apiVersion: v1
 entries:
   tailscale-subnet-router:
   - apiVersion: v2
+    appVersion: v1.38.4
+    created: "2023-04-11T14:40:53.988891211Z"
+    description: Deploy a Tailscale subnet router on Kubernetes
+    digest: 50946d01b7b258d8f906ad6513c739b9dca93a991e976b74c51fc1bc3731f692
+    home: https://github.com/tolkonepiu/helm-charts
+    maintainers:
+    - email: me@popov.wtf
+      name: tolkonepiu
+      url: https://popov.wtf
+    name: tailscale-subnet-router
+    sources:
+    - https://github.com/tolkonepiu/helm-charts/tree/main/charts/tailscale-subnet-router
+    type: application
+    urls:
+    - https://github.com/tolkonepiu/helm-charts/releases/download/tailscale-subnet-router-1.38.4/tailscale-subnet-router-1.38.4.tgz
+    version: 1.38.4
+  - apiVersion: v2
     appVersion: v1.38.3
     created: "2023-04-02T18:34:13.892014025Z"
     description: Deploy a Tailscale subnet router on Kubernetes
@@ -307,4 +324,4 @@ entries:
     urls:
     - https://github.com/tolkonepiu/helm-charts/releases/download/tailscale-subnet-router-1.0.0/tailscale-subnet-router-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-02T18:34:13.892113025Z"
+generated: "2023-04-11T14:40:53.989088111Z"
