@@ -1,6 +1,6 @@
 # tailscale-subnet-router
 
-![Version: 1.76.1](https://img.shields.io/badge/Version-1.76.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.76.1](https://img.shields.io/badge/AppVersion-v1.76.1-informational?style=flat-square)
+![Version: 1.76.6](https://img.shields.io/badge/Version-1.76.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.76.6](https://img.shields.io/badge/AppVersion-v1.76.6-informational?style=flat-square)
 
 Deploy a Tailscale subnet router on Kubernetes
 
